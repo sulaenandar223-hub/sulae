@@ -1,0 +1,661 @@
+
+/* ===== HOME SECTION FIX ===== */
+
+:root {
+    --nav-height: 123px;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+section {
+    scroll-margin-top: var(--nav-height);
+}
+
+.hero {
+    min-height: calc(100vh - var(--nav-height));
+    display: flex;
+    align-items: center;
+    padding: 60px 0;
+    overflow: visible;
+}
+
+/* Keep the text and image vertically centered */
+.hero .container {
+    width: 100%;
+}
+
+.hero .row {
+    align-items: center;
+}
+
+/* ===== PROFILE IMAGE RECTANGLE STYLE ===== */
+
+.profile-container {
+    width: 100%;
+    max-width: 540px;
+    height: 470px;
+    margin: 0 auto;
+    padding: 12px;
+
+    border-radius: 30px;
+    background: linear-gradient(135deg, #e9dafa, #d6b6f8);
+
+    box-shadow: 0 25px 60px rgba(130, 91, 160, 0.22);
+
+    overflow: hidden;
+    animation: none;
+    transform: none;
+}
+
+.profile-img {
+    width: 100%;
+    height: 100%;
+    display: block;
+
+    object-fit: cover;
+    object-position: center 35%;
+
+    border-radius: 22px;
+}
+
+/* ===== HERO BUTTONS ===== */
+
+.main-btn,
+.second-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 13px 28px;
+    margin: 15px 12px 0 0;
+
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: 600;
+
+    transition: all 0.3s ease;
+}
+
+.main-btn {
+    color: white !important;
+    background: linear-gradient(135deg, #a56eaa, #80518f);
+    box-shadow: 0 8px 20px rgba(145, 95, 155, 0.25);
+}
+
+.main-btn:hover {
+    color: white !important;
+    transform: translateY(-4px);
+    box-shadow: 0 12px 25px rgba(145, 95, 155, 0.35);
+}
+
+.second-btn {
+    color: #925d9b !important;
+    background: white;
+    border: 2px solid #a875b0;
+}
+
+.second-btn:hover {
+    color: white !important;
+    background: #925d9b;
+    transform: translateY(-4px);
+}
+
+/* ===== RESPONSIVE ===== */
+
+@media (max-width: 991px) {
+    :root {
+        --nav-height: 90px;
+    }
+
+    .hero {
+        text-align: center;
+        padding: 50px 0;
+    }
+
+    .profile-container {
+        margin-top: 40px;
+        max-width: 450px;
+        height: 420px;
+    }
+}
+
+@media (max-width: 576px) {
+    .profile-container {
+        height: 350px;
+    }
+
+    .main-btn,
+    .second-btn {
+        padding: 11px 20px;
+        font-size: 14px;
+    }
+}
+
+
+
+/* =================================
+   4. HERO SECTION
+================================= */
+
+.hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    padding: 120px 0 80px;
+    background:
+        radial-gradient(circle at 85% 20%, #f3dff4 0, transparent 30%),
+        radial-gradient(circle at 10% 90%, #f8eaf5 0, transparent 30%),
+        var(--light);
+}
+
+.welcome {
+    color: var(--primary);
+    font-weight: 700;
+    font-size: 13px;
+    letter-spacing: 4px;
+    margin-bottom: 20px;
+}
+
+.hero h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(45px, 6vw, 75px);
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 25px;
+}
+
+.hero h1 span {
+    background: linear-gradient(120deg, var(--primary), #d58acb);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+.description {
+    max-width: 550px;
+    color: var(--text);
+    font-size: 17px;
+    margin-bottom: 30px;
+}
+
+
+/* =================================
+   5. HERO PROFILE IMAGE
+================================= */
+
+.profile-container {
+    width: 400px;
+    height: 470px;
+    margin: auto;
+    padding: 12px;
+    background: linear-gradient(135deg, #e7ddf5, #efb6e7);
+    border-radius: 200px 200px 35px 35px;
+    box-shadow: 0 20px 50px rgba(155, 104, 161, 0.2);
+    animation: floatImage 4s ease-in-out infinite;
+    transition: 0.4s ease;
+}
+
+.profile-container:hover {
+    transform: scale(1.03);
+    box-shadow: 0 25px 60px rgba(155, 104, 161, 0.3);
+}
+
+.profile-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: inherit;
+}
+
+@keyframes floatImage {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-12px);
+    }
+}
+
+
+/* =================================
+   6. SECTION TITLES
+================================= */
+
+.section-title {
+    text-align: center;
+    margin-bottom: 55px;
+}
+
+.section-title p {
+    color: var(--primary);
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 4px;
+}
+
+.section-title h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 42px;
+    font-weight: 700;
+}
+
+.section-title h2 span {
+    color: var(--primary);
+}
+
+
+/* =================================
+   7. ABOUT SECTION
+================================= */
+
+#about {
+    background: white;
+}
+
+#about h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 29px;
+    margin-bottom: 20px;
+}
+
+#about p {
+    color: var(--text);
+    margin-bottom: 18px;
+}
+
+.about-card {
+    background: linear-gradient(145deg, #f8effa, #fceef8);
+    padding: 35px;
+    border-radius: 25px;
+    border: 1px solid #f1e0f1;
+    box-shadow: 0 12px 35px rgba(100, 60, 110, 0.07);
+    transition: 0.3s ease;
+}
+
+.about-card:hover {
+    transform: translateY(-7px);
+    box-shadow: 0 18px 40px rgba(100, 60, 110, 0.12);
+}
+
+.about-card p {
+    padding-bottom: 12px;
+    border-bottom: 1px solid rgba(155, 104, 161, 0.12);
+}
+
+.about-card p:last-child {
+    border-bottom: none;
+}
+
+
+/* =================================
+   8. SKILLS SECTION
+================================= */
+
+.skills-section {
+    background: var(--light);
+}
+
+.skill-card {
+    height: 100%;
+    padding: 35px 15px;
+    text-align: center;
+    background: linear-gradient(145deg, #f8d8f1, #efb6e7);
+    border-radius: 22px;
+    border: 1px solid rgba(155, 104, 161, 0.12);
+    transition: all 0.35s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.skill-card::before {
+    content: "";
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.25);
+    top: -45px;
+    right: -35px;
+    transition: 0.4s;
+}
+
+.skill-card:hover {
+    transform: translateY(-12px) scale(1.03);
+    background: linear-gradient(145deg, #e9c8f0, #dca9e1);
+    box-shadow: 0 15px 30px rgba(155, 104, 161, 0.18);
+}
+
+.skill-card:hover::before {
+    transform: scale(2);
+}
+
+.skill-card h3 {
+    font-size: 22px;
+    font-weight: 700;
+    color: var(--primary-dark);
+    position: relative;
+}
+
+.skill-card p {
+    color: #765c79;
+    font-size: 14px;
+    margin-bottom: 0;
+    position: relative;
+}
+
+
+/* =================================
+   9. PROJECTS SECTION
+================================= */
+
+#projects {
+    background: white;
+}
+
+.project-card {
+    height: 100%;
+    background: white;
+    border-radius: 22px;
+    overflow: hidden;
+    border: 1px solid #f0e6f1;
+    box-shadow: 0 8px 30px rgba(80, 50, 90, 0.07);
+    transition: all 0.4s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-12px);
+    box-shadow: 0 20px 40px rgba(100, 60, 110, 0.15);
+}
+
+.project-image {
+    height: 190px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #9b68a1, #d9a7df);
+    position: relative;
+    overflow: hidden;
+}
+
+.project-image::before {
+    content: "";
+    position: absolute;
+    width: 180px;
+    height: 180px;
+    border: 2px solid rgba(255, 255, 255, 0.25);
+    border-radius: 50%;
+    transition: 0.5s ease;
+}
+
+.project-card:hover .project-image::before {
+    transform: scale(1.5);
+}
+
+.project-image h2 {
+    color: white;
+    font-family: 'Playfair Display', serif;
+    font-size: 65px;
+    font-weight: 700;
+    z-index: 1;
+}
+
+.project-image.pink {
+    background: linear-gradient(135deg, #d88fc5, #f1b9d8);
+}
+
+.project-image.blue {
+    background: linear-gradient(135deg, #849acb, #b9b6e8);
+}
+
+.project-content {
+    padding: 28px;
+}
+
+.project-content h4 {
+    font-weight: 700;
+    font-size: 21px;
+    margin-bottom: 15px;
+}
+
+.project-content p {
+    color: var(--text);
+    font-size: 14px;
+}
+
+.project-content span {
+    display: inline-block;
+    background: #f5e8f6;
+    color: var(--primary-dark);
+    padding: 5px 13px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 600;
+    margin: 5px 3px 0 0;
+}
+
+
+/* =================================
+   10. EDUCATION SECTION
+================================= */
+
+.education-card {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+    padding: 40px;
+    margin: 60px auto;
+    max-width: 1100px;
+    background: linear-gradient(120deg, #f8eafa, #fceef8);
+    border-radius: 25px;
+    box-shadow: 0 12px 35px rgba(100, 60, 110, 0.08);
+    transition: 0.3s ease;
+}
+
+.education-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px rgba(100, 60, 110, 0.13);
+}
+
+.education-info {
+    flex: 1;
+}
+
+.education-info h4 {
+    font-family: 'Playfair Display', serif;
+    font-size: 27px;
+    font-weight: 700;
+    color: var(--primary-dark);
+    margin-bottom: 15px;
+}
+
+.education-info p {
+    color: var(--text);
+}
+
+.education-img {
+    width: 260px;
+    height: 280px;
+    flex-shrink: 0;
+    overflow: hidden;
+    border-radius: 20px;
+    box-shadow: 0 10px 25px rgba(100, 60, 110, 0.15);
+}
+
+.education-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: 0.5s ease;
+}
+
+.education-img:hover img {
+    transform: scale(1.08);
+}
+
+
+/* =================================
+   11. CONTACT SECTION
+================================= */
+
+.contact-section {
+    background:
+        radial-gradient(circle at 10% 10%, #f2dff5, transparent 35%),
+        var(--light);
+}
+
+.contact-section > .container > p {
+    color: var(--text);
+    margin-bottom: 25px;
+}
+
+.social-links {
+    margin-top: 30px;
+}
+
+.social-links a {
+    display: inline-block;
+    color: var(--primary);
+    text-decoration: none;
+    font-weight: 600;
+    margin: 10px 15px;
+    transition: 0.3s ease;
+}
+
+.social-links a:hover {
+    color: var(--primary-dark);
+    transform: translateY(-4px);
+}
+
+
+/* =================================
+   12. FOOTER
+================================= */
+
+footer {
+    background: #332b36;
+    color: white;
+    text-align: center;
+    padding: 25px 0;
+}
+
+footer p {
+    margin: 0;
+    font-size: 14px;
+}
+
+
+/* =================================
+   13. RESPONSIVE DESIGN
+================================= */
+
+@media (max-width: 991px) {
+
+    .navbar {
+        padding: 14px 0;
+    }
+
+    .nav-link {
+        margin-left: 0;
+        padding: 10px 0;
+    }
+
+    .hero {
+        text-align: center;
+    }
+
+    .description {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .profile-container {
+        width: 330px;
+        height: 390px;
+        margin-top: 50px;
+    }
+}
+
+@media (max-width: 768px) {
+
+    .section-padding {
+        padding: 70px 0;
+    }
+
+    .hero {
+        padding: 120px 0 70px;
+    }
+
+    .hero h1 {
+        font-size: 45px;
+    }
+
+    .profile-container {
+        width: 280px;
+        height: 330px;
+    }
+
+    .section-title h2 {
+        font-size: 34px;
+    }
+
+    .education-card {
+        flex-direction: column-reverse;
+        text-align: center;
+        padding: 28px;
+        gap: 25px;
+    }
+
+    .education-img {
+        width: 220px;
+        height: 230px;
+    }
+
+    .project-image {
+        height: 160px;
+    }
+}
+
+@media (max-width: 400px) {
+
+    .hero h1 {
+        font-size: 36px;
+    }
+
+    .profile-container {
+        width: 240px;
+        height: 280px;
+    }
+
+    .section-title h2 {
+        font-size: 29px;
+    }
+
+    .education-img {
+        width: 190px;
+        height: 210px;
+    }
+
+    .main-btn,
+    .second-btn {
+        padding: 11px 20px;
+        font-size: 14px;
+    }
+}
+
+
+/* =================================
+   14. REDUCED MOTION
+================================= */
+
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        scroll-behavior: auto !important;
+        animation-duration: 0.01ms !important;
+        transition-duration: 0.01ms !important;
+    }
+}
